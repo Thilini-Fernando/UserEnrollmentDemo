@@ -1,0 +1,15 @@
+<div class="row mb-1">
+  <div class="col">
+    <button id="btnAdd" [hidden]="!btnAddPrivilage" (click)="openModalAdd()"
+      class="btn btn-sm btn-outline-primary btn-square" placement="top" ngbTooltip="Add"><i
+        class="fa fa-plus fa-lg"></i></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <angular-slickgrid gridId="grid1" [columnDefinitions]="columnDefinitions" [gridOptions]="gridOptions"
+      [dataset]="dataset" gridWidth="100%" (onAngularGridCreated)="angularGridReady($event)"
+      (sgOnSelectedRowsChanged)="onSelectedRowsChanged($event.detail.eventData, $event.detail.args)">
+    </angular-slickgrid>
+  </div>
+</div>
